@@ -16,10 +16,12 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.6'  # ✅ Ensure Dart >= 3.8.1
+          flutter-version: '3.22.1'  # ✅ Ensures Dart >= 3.8.1
 
-      - name: Check Flutter version
-        run: flutter --version  # ✅ CONFIRMS Flutter is set correctly
+      - name: Check versions
+        run: |
+          flutter --version
+          dart --version
 
       - name: Install dependencies
         run: flutter pub get
